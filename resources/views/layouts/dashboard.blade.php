@@ -48,6 +48,11 @@
             
             <img src="/assets/images/profile/{{ Auth::user()->validationn->image }}" alt="" />
             @endif
+            @can('admin')
+            <img src="/assets/images/profile/admin.png" alt="" />
+            @elsecan('superadmin')
+            <img src="/assets/images/profile/admin.png" alt="" />
+            @endcan
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="{{ route('logout') }}"

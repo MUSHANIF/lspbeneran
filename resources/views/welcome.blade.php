@@ -494,7 +494,7 @@ margin-top: 40px;
                 
               
                 <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Start Single Product -->
+                    
                     <div class="single-product">
                         <div class="product-image">
                             <img src="/assets/images/layanan/{{ $dat->image }}" alt="#">
@@ -664,7 +664,7 @@ margin-top: 40px;
             <img src="{{ asset('assets/image/logo.png') }}" width="150px" alt="">
           </h6>
           <p>
-            Sitravel adalah perusahaan berbasis web yang bertujuan untuk memudahkan anda dalam 
+            Sitravel adalah perusahaan berbasis web yang bertujuan untuk memudahkan anda dalam memesan tiket kemanapun tujuan anda.
           </p>
         </div>
 
