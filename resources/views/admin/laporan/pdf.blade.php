@@ -99,10 +99,13 @@
             <td>{{ $key->jumlah }}</td>
             <td>Rp. {{number_format($key->bayar, 0, '', '.') }}</td>
             
-        
+            @endforeach
+        </tr>
+        <tr>
+         <th colspan="20" class="text-right" >Total Keseluruhan biaya pemasukan: Rp. {{number_format($key->sum('bayar'), 0, '', '.') }}</th>
         </tr>
     </tbody>
-    @endforeach
+   
    
 
 </table>

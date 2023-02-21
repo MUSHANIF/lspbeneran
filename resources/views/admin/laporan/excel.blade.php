@@ -40,12 +40,17 @@
             <td colspan="3">{{ $key->metode_pembayaran }}</td>
             <td colspan="2">{{ $key->jumlah }}</td>
             <td colspan="2">Rp. {{number_format($key->bayar, 0, '', '.') }}</td>
- 
+           
+            
             
         
         </tr>
+        @endforeach
+        <tr>
+            <th colspan="13"  >Total Keseluruhan biaya pemasukan: Rp. {{number_format($key->sum('bayar'), 0, '', '.') }}</th>
+           </tr>
     </tbody>
-    @endforeach
+
    
 
 </table>

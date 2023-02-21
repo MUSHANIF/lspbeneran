@@ -8,7 +8,7 @@
     <div class="card-body">
       <h5 class="card-title">Laporan transaksi</h5>
 
-      <!-- Table with hoverable rows -->
+      
       <table class="table table-hover">
         <thead>
           <tr>
@@ -17,6 +17,8 @@
             <th scope="col">Metode pembayaran</th>
             <th scope="col">Jumlah</th>
             <th scope="col">Total bayar</th>
+            
+            
             
        
           </tr>
@@ -44,11 +46,16 @@
             <td>{{ $key->metode_pembayaran }}</td>
             <td>{{ $key->jumlah }}</td>
             <td>Rp. {{number_format($key->bayar, 0, '', '.') }}</td>
-            
-          </tr>
+            @endforeach
          
+          </tr>
+          <tr>
+            <th colspan="20" class="text-right" >Total Keseluruhan biaya pemasukan: Rp. {{number_format($key->sum('bayar'), 0, '', '.') }}</th>
+           </tr>
         </tbody>
-        @endforeach
+       
+        
+       
       </table>
       
 

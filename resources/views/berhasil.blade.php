@@ -11,7 +11,7 @@
     <div class="card-body">
       <h5 class="card-title">Tiket yang sudah anda pesan anda</h5>
      
-      <!-- Active Table -->
+      
       <table class="table table-borderless">
         <thead class="text-center">
           <tr>

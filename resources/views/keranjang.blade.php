@@ -37,13 +37,13 @@
       
         <div class="col-12">
           <div class="form-floating">
-            <textarea class="form-control" value="{{ old('Address') }}" placeholder="Address" name="alamat" id="floatingTextarea" style="height: 100px;"></textarea>
+            <textarea class="form-control" value="" placeholder="Address" name="alamat" id="floatingTextarea" style="height: 100px;">{{ old('Address') }}</textarea>
             <label for="floatingTextarea">Address</label>
           </div>
         </div>               
            <input type="hidden" name="userid" value="{{ Auth::user()->id }}">
             <div class="col-sm-10">
-                <label for="inputNumber" class="col-sm-2 col-form-label">Masukan foto</label>
+                <label for="inputNumber" class="col-sm-2 col-form-label">Masukan foto anda</label>
               <input class="form-control" name="image" type="file"  id="image" >
               <img id="preview-image-before-upload" src="" alt="" style="width: 250px" class="mt-3" />
             </div>                     

@@ -23,7 +23,7 @@
                       <p class="text-center small">Enter your personal details to create account</p>
                     </div>
 
-                    <form method="POST" action="{{ route('register') }}" class="row g-3 needs-validation" novalidate>
+                    <form method="POST" action="{{ route('register') }}" class="row g-3 needs-validation">
                       @csrf
                       <div class="col-12">
                         <label for="yourName" class="form-label">Your Name</label>
@@ -42,7 +42,7 @@
                         <div class="invalid-feedback">Please enter your password!</div>
                       </div>
                       <div class="col-12">
-                          <label for="yourPassword" class="form-label">Confrim Password</label>
+                          <label for="yourPassword" class="form-label">Confirm Password</label>
                           <input type="password" name="password_confirmation" class="form-control" id="yourPassword" required>
                           <div class="invalid-feedback">Please enter your Confirm password!</div>
                         </div>
@@ -50,7 +50,7 @@
 
                       <div class="col-12">
                         <div class="form-check">
-                          <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required />
+                          <input class="form-check-input" name="terms" type="checkbox"  id="acceptTerms" required />
                           <label class="form-check-label" for="acceptTerms">Saya setuju dengan segala <a href="#" style="text-decoration: none">ketentuan dan aturan</a></label>
                           <div class="invalid-feedback">Kamu harus menceklis nya!.</div>
                         </div>

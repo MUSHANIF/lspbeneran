@@ -74,34 +74,34 @@ class TransaksiController extends Controller
         }
 
       
-        $kursi = kursi::where('status', 1)->first();
-        $datas = kursi::where('layananid', $request->layananid )->update(['nomor' => $kursi->nomor - $request->nomor]);
+        $kursi = kursi::where('layananid', $request->layananid )->where('status', 1)->first();
+        $datas = kursi::where('layananid', $request->layananid )->update(['stok' => $kursi->stok - $request->nomor]);
         
-        toastr()->success('Berhasil di tambah ke keranjang anda!', 'Sukses');
+        
         return redirect()->route('keranjang', Auth::id())->with('success','berhasil di tambahkan di keranjang anda');
        
     }
     public function hapus(Request $request, $id)
     {
     
-        $prod = kursi::where('status',  1 )->first();
+        $prod = kursi::where('layananid',$request->layananid)->where('status',  1 )->first();
         kursi::where('layananid',$request->layananid)->update([
-           'nomor' => $prod->nomor + $request->nomor,
+           'stok' => $prod->stok + $request->nomor,
          
        ]);
         $hapus = cart::find($id);
         $hapus->delete();
        
        
-        toastr()->info('Berhasil di hapus!', 'Sukses');
+        // toastr()->info('Berhasil di hapus!', 'Sukses');
         return redirect()->route('keranjang', Auth::id())->with('success','barang anda berhasil di hapus');
     }
     public function pembayaran($id)
     {
         $layanan =  cart::with(['user','cart'])->where('userid', $id)->where('status', 0)->get();
-        $ORG =  cart::where('userid', $id)->where('status', 0)->first();
+        $orang =  cart::where('userid', $id)->where('status', 0)->sum('jumlah');
         
-        $orang = $ORG->jumlah;
+        // $orang = $ORG->jumlah;
         $layanan2 =  cart::with(['user','cart'])
         ->where('userid',Auth::id()) 
         ->get();
