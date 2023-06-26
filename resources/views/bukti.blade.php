@@ -9,7 +9,7 @@
 </head>
 <body>
     @foreach ($cart as $key)
-    @for ($i = 0; $i < $key->jumlah; $i++)
+  
         
  
     <div class="cardWrap">
@@ -31,7 +31,7 @@
             <span>Harga</span>
           </div>
           <div class="time">
-            <h2>{{ $key->trans->metode_pembayaran }}</h2>
+            <h2>Cash</h2>
             <span>Metode pembayaran</span>
           </div>
           
@@ -47,7 +47,7 @@
         </div>
       
       </div>
-      @endfor
+     
       @endforeach
 </body>
 </html>

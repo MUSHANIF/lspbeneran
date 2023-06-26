@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('validations', function (Blueprint $table) {
             $table->id();       
             $table->unsignedBigInteger('userid');
+            $table->string('nik')->nullable();
             $table->string('visa')->nullable();
             $table->string('image')->nullable();
             $table->string('no_hp')->nullable();            

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('userid');
             $table->unsignedBigInteger('jnsid');
             $table->unsignedBigInteger('layananid');  
-            $table->integer('biaya')->nullable();    
+            // $table->integer('biaya')->nullable();    
             $table->integer('jumlah')->nullable();      
             $table->date('waktu')->nullable();            
             $table->integer('status')->default(0);

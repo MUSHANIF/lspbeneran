@@ -44,7 +44,7 @@
       <ul>
         <li class="nav-item dropdown">
           <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            @if ($usercek )                          
+            @if ($usercek && auth()->user()->level == 1)                          
             
             <img src="/assets/images/profile/{{ Auth::user()->validationn->image }}" alt="" />
             @endif

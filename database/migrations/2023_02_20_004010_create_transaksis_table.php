@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('waktu')->nullable();
             $table->string('metode_pembayaran');   
             $table->integer('total')->nullable();
+            $table->integer('jumlah')->nullable();
             $table->integer('bayar')->nullable();
             $table->integer('kembalian');   
             $table->timestamps();

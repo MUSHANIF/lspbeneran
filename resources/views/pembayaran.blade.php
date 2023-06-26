@@ -39,7 +39,7 @@
                
            <input type="hidden" name="userid" value="{{ $m->userid }}">
            <input type="hidden"  name="cartid" value="{{ $m->id }}"/>
-           <input type="hidden"  name="jumlah" value="{{ $m->jumlah }}"/>
+           {{-- <input type="hidden"  name="jumlah" value="{{$m->sum('jumlah') }}"/> --}}
            <input type="hidden"  name="waktu" value="{{ date("Y-m-d") }}"/>
            @endforeach
           <div class="row mb-3">

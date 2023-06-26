@@ -71,7 +71,7 @@
             <th scope="col">Jenis layanan</th>
             <th scope="col">Nama layanan</th>            
             <th scope="col">Waktu</th>
-            <th scope="col">jumlah</th>
+            <th scope="col">Harga satuan</th>
             <th scope="col">Status</th>
             <th scope="col">Action</th>
           </tr>
@@ -85,7 +85,7 @@
             <td>{{ $key->layanan->name }}</td>
             <td>{{ $key->name }}</td>
             <td>{{ $key->waktu }}</td>
-            <td>{{ $key->jumlah }}</td>
+            <td>Rp. {{number_format($key->harga, 0, '', '.') }}</td>
             <td>
               @if ( $key->status == 0 )
               <span class="card text-bg-danger p-1 text-white text-center">Belum di bayar</span>
@@ -111,6 +111,13 @@
             </td>
           </tr>
           @endforeach
+          <tr>
+            <th colspan="10" class="text-right" >Total Keseluruhan biaya yang anda akan bayar: Rp. {{number_format($usertotalharga, 0, '', '.') }}</th>
+           
+           </tr>
+         <tr>
+          <th colspan="20" class="text-right" >Total Keseluruhan Jumlah: {{$usertotaljumlah}}</th>
+         </tr>
         
         </tbody>
       </table>      
